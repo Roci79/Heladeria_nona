@@ -60,36 +60,46 @@
     <!-- Products End -->
    
     <script>
-   
+        // Añadimos un listener para el evento 'keyup' en el documento
         document.addEventListener('keyup', e => {
+            // Verificamos si el evento fue disparado desde el input con id 'buscador'
             if (e.target.matches('#buscador')) {
+                // Obtenemos el término de búsqueda ingresado, lo limpiamos y convertimos a minúsculas
                 const searchTerm = e.target.value.trim().toLowerCase();
+                // Seleccionamos todos los elementos con la clase 'product-item'
                 const productItems = document.querySelectorAll('.product-item');
     
+                // Recorremos cada elemento de producto
                 productItems.forEach(item => {
+                    // Obtenemos el nombre del producto (contenido del elemento 'h5'), lo limpiamos y convertimos a minúsculas
                     const productName = item.querySelector('h5').textContent.trim().toLowerCase();
+                    // Verificamos si el nombre del producto incluye el término de búsqueda
                     if (productName.includes(searchTerm)) {
+                        // Si lo incluye, mostramos el elemento
                         item.style.display = '';
                     } else {
+                        // Si no lo incluye, ocultamos el elemento
                         item.style.display = 'none';
                     }
                 });
             }
         });
-
+    
+        // Guardamos la posición del scroll antes de que la página se recargue
         window.addEventListener("beforeunload", function() {
             localStorage.setItem("scrollPosition", window.scrollY);
         });
+    
+        // Cuando la página se carga, recuperamos y establecemos la posición del scroll
         window.addEventListener("load", function() {
             const scrollPosition = localStorage.getItem("scrollPosition");
             if (scrollPosition) {
+                // Si hay una posición guardada, hacemos scroll hasta esa posición
                 window.scrollTo(0, parseInt(scrollPosition, 10));
             }
         });
-                
-
-
     </script>
+    
 
 
     
