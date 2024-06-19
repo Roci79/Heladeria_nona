@@ -149,3 +149,5 @@ def pagar(request):
     total_pagar = request.session.get('total_pagar', 0)
     return render(request, 'helados/pagar.html', {'total_pagar': total_pagar})
 
+def fin(request):
+   return render(request,'helados/fin.html')

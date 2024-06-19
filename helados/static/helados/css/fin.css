@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Cambia según los colores de tu proyecto */
+    margin: 0;
+    overflow: hidden;
+}
+.carousel-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color:white; /* Cambia según los colores de tu proyecto */
+}
+.carousel {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    animation: scroll 120s linear infinite; /* Ajustamos la duración de la animación a 120 segundos */
+}
+.carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 33vh; /* Ajusta según el número de elementos */
+    color: black; /* Cambia según los colores de tu proyecto */
+}
+.carousel-item img {
+    max-height: 70%; /* Incrementamos el tamaño de la imagen */
+    border-radius: 50%;
+}
+@keyframes scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+.play-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: pink; /* Cambia según los colores de tu proyecto */
+    border: 1px solid #23a2ec;
+    border-radius: 5px;
+}

@@ -34,7 +34,8 @@ urlpatterns = [
     path('eliminar_producto/<int:item_id>/', views.eliminar_producto, name='eliminar_producto'),
     path('helados/restar_producto/<str:tipo_producto>/<int:producto_id>/', views.restar_producto, name='restar_producto'),
     path('ver_carro/', views.ver_carro, name='ver_carro'),
-    path('pagar/', views.pagar, name='pagar'),path('pagar/', views.pagar, name='pagar' ),
+    path('pagar/', views.pagar, name='pagar'),
+    path('fin/', views.fin, name='fin'),
     
  
 
