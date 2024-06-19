@@ -12,47 +12,34 @@
 <body>
     <center><h1>Bibliografía</h1></center>
     <div class="carousel-container">
-        <div class="carousel">
+        <div class="carousel" id="carousel">
             <div class="carousel-item">
-                <img src="{% static 'helados/img/Chef.jpg' %}" >
-                <h4>Diseño de Interfaces Web: José María Freire Ferreiro </h4> 
+                <img src="{% static 'helados/img/Chef.jpg' %}">
+                <br>
+                <span><span>Diseño de Interfaces Web: </span> <span style="font-weight: bolder;">José María Freire Ferreiro</span></span>
             </div>
             <div class="carousel-item">
                 <img src="{% static 'helados/img/Chef.jpg' %}">
-                <h4>Desenvolvemento Web en Contorno Cliente: Cristina Diaz Busch</h4>
+                <br>
+                <span><span>Desenvolvemento Web en Contorno Cliente: </span><span style="font-weight: bolder;"> Cristina Diaz Busch</span></span>
             </div>
             <div class="carousel-item">
-                <img src="{% static 'helados/img/Chef.jpg' %}" >
-                <h4>Desenvolvememento Weben Contorno Servidor: Marcos Cobas Garcia</h4>
+                <img src="{% static 'helados/img/Chef.jpg' %}">
+                <br>
+                <span><span>Desenvolvememento Web en Contorno Servidor: </span><span style="font-weight: bolder;"> Marcos Cobas Garcia</span></span>
             </div>
             <div class="carousel-item">
-                <img src="{% static 'helados/img/Chef.jpg' %}" >
-                <h4>Despregamento de aplicacions web: José Luis Vidal Luaces</h4>
+                <img src="{% static 'helados/img/Chef.jpg' %}">
+                <br>
+                <span><span>Despregamento de aplicacions web: </span><span style="font-weight: bolder;"> José Luis Vidal Luaces</span></span>
             </div>
             <div class="carousel-item">
-                <img src="{% static 'helados/img/Chef.jpg' %}" >
-                <h4>Despregamento de aplicacions web: Ana Belén Veloso Rodríguez</h4>
-            </div>
-            <!-- Repetimos los items para crear un loop infinito -->
-            <div class="carousel-item">
-                <img src="{% static 'helados/img/Chef.jpg' %}" >
-                <h4>Diseño de Interfaces Web: José María Freire Ferreiro </h4> 
+                <img src="{% static 'helados/img/Chef.jpg' %}">
+                <br>
+                <span><span>Despregamento de aplicacions web: </span><span style="font-weight: bolder;">Ana Belén Veloso Rodríguez</span></span>
             </div>
             <div class="carousel-item">
-                <img src="{% static 'helados/img/Chef.jpg' %}" >
-                <h4>Desenvolvemento Web en Contorno Cliente: Cristina Diaz Busch</h4>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'helados/img/Chef.jpg' %}" >
-                <h4>Desenvolvememento Weben Contorno Servidor: Marcos Cobas Garcia</h4>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'helados/img/Chef.jpg' %}" >
-                <h4>Despregamento de aplicacions web: José Luis Vidal Luaces</h4>
-            </div>
-            <div class="carousel-item">
-                <img src="{% static 'helados/img/Chef.jpg' %}" >
-                <h4>Despregamento de aplicacions web: Ana Belén Veloso Rodríguez</h4>
+                <center><h1>Gracias por estos dos años</h1></center>
             </div>
         </div>
     </div>
@@ -61,18 +48,12 @@
         <source src="{% static 'helados/music/musica2.mp3' %}" type="audio/mpeg">
         Tu navegador no soporta la reproducción de audio.
     </audio>
-
     <!-- <button class="play-button" onclick="playMusic()">Reproducir Música</button> -->
-
     <script>
-        function playMusic() {
+        document.getElementById('carousel').addEventListener('animationend', function() {
             var audio = document.getElementById('background-music');
-            audio.play().then(function() {
-                document.querySelector('.play-button').style.display = 'none';
-            }).catch(function(error) {
-                console.log('Error al reproducir el audio:', error);
-            });
-        }
+            audio.pause(); // Pausa la música al finalizar la animación
+        });
     </script>
 </body>
 </html>

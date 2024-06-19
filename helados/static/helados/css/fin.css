@@ -9,13 +9,13 @@ body {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    background-color:white; /* Cambia según los colores de tu proyecto */
+    background-color: #333; /* Cambia según los colores de tu proyecto */
 }
 .carousel {
     position: absolute;
     top: 0;
     width: 100%;
-    animation: scroll 120s linear infinite; /* Ajustamos la duración de la animación a 120 segundos */
+    animation: scroll 120s linear; /* Ajustamos la duración de la animación a 120 segundos */
 }
 .carousel-item {
     display: flex;
@@ -24,7 +24,7 @@ body {
     flex-direction: column;
     width: 100%;
     height: 33vh; /* Ajusta según el número de elementos */
-    color: black; /* Cambia según los colores de tu proyecto */
+    color: white; /* Cambia según los colores de tu proyecto */
 }
 .carousel-item img {
     max-height: 70%; /* Incrementamos el tamaño de la imagen */
@@ -32,7 +32,7 @@ body {
 }
 @keyframes scroll {
     0% { transform: translateY(0); }
-    100% { transform: translateY(-100%); }
+    100% { transform: translateY(-200%); } /* Ajusta esto según el número de elementos */
 }
 .play-button {
     position: absolute;
