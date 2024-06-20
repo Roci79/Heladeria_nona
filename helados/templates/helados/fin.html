@@ -59,10 +59,14 @@
 Tu navegador no soporta la reproducción de audio.
 </audio>
 <script>
-document.getElementById('carousel').addEventListener('animationend', function() {
-    var audio = document.getElementById('background-music');
-    audio.pause(); // Pausa la música al finalizar la animación
-});
+    document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('background-music');
+        audio.play().then(function() {
+            setTimeout(function() {
+                audio.pause();
+            }, 108000); // 240000ms = 240s (igual a la duración de la animación)
+        })
+    });
 </script>
 </body>
 </html>

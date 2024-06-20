@@ -15,7 +15,7 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
-    animation: scroll 240s linear; /* Ajustamos la duración de la animación a 240 segundos */
+    animation: scroll 248s linear; /* Ajustamos la duración de la animación a 240 segundos */
 }
 .carousel-item {
     display: flex;
