@@ -15,7 +15,7 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
-    animation: scroll 120s linear; /* Ajustamos la duración de la animación a 120 segundos */
+    animation: scroll 240s linear; /* Ajustamos la duración de la animación a 240 segundos */
 }
 .carousel-item {
     display: flex;
@@ -28,21 +28,12 @@ body {
 }
 .carousel-item img {
     max-height: 70%; /* Incrementamos el tamaño de la imagen */
+    width: auto;
+    max-width: 200px; /* Ajusta según tus necesidades */
+    height: 200px; /* Ajusta según tus necesidades */
     border-radius: 50%;
 }
 @keyframes scroll {
     0% { transform: translateY(0); }
-    100% { transform: translateY(-200%); } /* Ajusta esto según el número de elementos */
-}
-.play-button {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: pink; /* Cambia según los colores de tu proyecto */
-    border: 1px solid #23a2ec;
-    border-radius: 5px;
+    100% { transform: translateY(-220%); } /* Ajusta esto según el número de elementos */
 }
