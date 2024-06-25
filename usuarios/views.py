@@ -11,7 +11,7 @@ def login_user(request):
 
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return redirect('ver_carro')
         else:
             return redirect('login')
     else:
