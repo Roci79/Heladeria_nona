@@ -31,8 +31,10 @@
                             <div class="service-img mx-auto">
                                 {% if sabor.foto %}
                                     <img class="w-100 h-150 bg-light p-3" src="{{ sabor.foto.url }}">
+                                     <!-- Si el sabor tiene una foto, se muestra esa foto. -->
                                 {%else%}
                                     <img class="w-150 h-150 bg-light p-3" src="{% static 'helados/img/product-4.jpg' %}">
+                                    <!-- Si el helado no tiene una foto, se muestra una imagen por defecto. -->
                                 {% endif %}
                             </div>
                             <div class="position-relative text-center bg-white rounded p-4 pb-5" style="margin-top: -75px;">
